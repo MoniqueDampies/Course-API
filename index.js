@@ -3,6 +3,7 @@ require('dotenv').config();
 const cors = require('cors');
 const app = express();
 const port = parseInt(process.env.PORT) || 4000;
+console.log(port);
 let courses = [
     {
         id: 1, name: 'Software Engineering'
@@ -14,7 +15,9 @@ let courses = [
         id: 3, name: "Database Management"
     }
 ];
-app.use(cors());
+app.use(cors(), express.urlencoded({
+    extended: true
+}));
 app.listen(port, ()=> {
     console.log(`Server is running at port ${port}`);
 })
