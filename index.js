@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const port = parseInt(process.env.port) || 4000;
+const port = parseInt(process.env.PORT) || 4000;
 let courses = [
     {
         id: 1, name: 'Software Engineering'
