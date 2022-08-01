@@ -1,4 +1,5 @@
 const express = require('express');
+const cors = require('cors');
 const app = express();
 const port = parseInt(process.env.PORT) || 4000;
 let courses = [
@@ -12,6 +13,7 @@ let courses = [
         id: 3, name: "Database Management"
     }
 ];
+app.use(cors());
 app.listen(port, ()=> {
     console.log(`Server is running at port ${port}`);
 })
