@@ -15,7 +15,7 @@ let courses = [
         id: 3, name: "Database Management"
     }
 ];
-app.use(cors(), express.urlencoded({
+app.use(cors(), express.json(),  express.urlencoded({
     extended: true
 }));
 app.listen(port, ()=> {
